@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Milo AI</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- VIDEO BACKGROUND -->
+    <video id="backgroundVideo" autoplay muted loop playsinline>
+        <source src="assets/background.mp4" type="video/mp4">
+    </video>
+
+    <!-- DARK OVERLAY -->
+    <div class="overlay"></div>
+
+
+    <!-- TOP BAR -->
+    <header>
+
+        <div class="logo">
+            <span class="dot"></span>
+            MILO
+        </div>
+
+        <div class="status">
+            <span class="status-dot"></span>
+            MILO ON DUTY
+        </div>
+
+        <div class="datetime">
+            <div id="time">00:00:00</div>
+            <div id="date">Loading...</div>
+        </div>
+
+    </header>
+
+
+    <!-- MAIN MILO AREA -->
+    <main>
+
+        <div class="milo-container">
+
+            <!-- CYBER RINGS -->
+            <div class="ring ring1"></div>
+            <div class="ring ring2"></div>
+            <div class="ring ring3"></div>
+
+            <!-- MILO -->
+            <img
+                id="milo"
+                src="assets/Milo_01_neutral.png"
+                alt="Milo"
+            >
+
+        </div>
+
+
+        <!-- VOICE WAVES -->
+        <div class="waves" id="waves">
+
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </div>
+
+
+        <!-- RESPONSE -->
+        <div class="response-box">
+
+            <div class="response-label">
+                MILO
+            
+            </div>
+
+            <div id="response">
+                Hello. I'm Milo.
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- BOTTOM CONTROL -->
+    <footer>
+
+        <button id="micButton" class="mic-button">
+
+            <span id="micIcon">🎙️</span>
+
+            <span id="micText">
+                MIC OFF
+            </span>
+
+        </button>
+
+
+    </footer>
+
+     <p>Made with love by vaibhav</p>
+    <script src="script.js"></script>
+
+</body>
+</html>

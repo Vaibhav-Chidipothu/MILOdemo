@@ -1,0 +1,534 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+
+    overflow: hidden;
+
+    font-family: "Segoe UI", Arial, sans-serif;
+
+    background: #02060b;
+
+    color: white;
+}
+
+
+/* =========================
+   VIDEO BACKGROUND
+========================= */
+
+#backgroundVideo {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    z-index: -3;
+}
+
+
+/* =========================
+   DARK OVERLAY
+========================= */
+
+.overlay {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(0, 255, 255, 0.08),
+            rgba(0, 0, 0, 0.75)
+        );
+
+    z-index: -2;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    height: 90px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 40px;
+
+    border-bottom: 1px solid rgba(0, 255, 255, 0.2);
+
+    background: rgba(0, 10, 20, 0.35);
+
+    backdrop-filter: blur(10px);
+}
+
+
+/* LOGO */
+
+.logo {
+
+    font-size: 28px;
+
+    font-weight: 700;
+
+    letter-spacing: 6px;
+
+    color: #00ffff;
+
+    text-shadow:
+        0 0 10px #00ffff,
+        0 0 30px #00ffff;
+}
+
+
+.dot {
+
+    display: inline-block;
+
+    width: 10px;
+    height: 10px;
+
+    margin-right: 12px;
+
+    border-radius: 50%;
+
+    background: #00ffff;
+
+    box-shadow:
+        0 0 10px #00ffff,
+        0 0 25px #00ffff;
+}
+
+
+/* SYSTEM STATUS */
+
+.status {
+
+    font-size: 13px;
+
+    letter-spacing: 3px;
+
+    color: #7ffcff;
+}
+
+
+.status-dot {
+
+    display: inline-block;
+
+    width: 8px;
+    height: 8px;
+
+    margin-right: 8px;
+
+    border-radius: 50%;
+
+    background: #00ff88;
+
+    box-shadow:
+        0 0 10px #00ff88;
+}
+
+
+/* DATE */
+
+.datetime {
+
+    text-align: right;
+
+    letter-spacing: 2px;
+}
+
+#time {
+
+    font-size: 20px;
+
+    color: #00ffff;
+
+    text-shadow:
+        0 0 10px #00ffff;
+}
+
+#date {
+
+    font-size: 11px;
+
+    margin-top: 4px;
+
+    color: #9bbec7;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+main {
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding-top: 60px;
+}
+
+
+/* =========================
+   MILO
+========================= */
+
+.milo-container {
+
+    position: relative;
+
+    width: 430px;
+    height: 430px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* MILO PNG */
+
+#milo {
+
+    width: 270px;
+
+    max-height: 330px;
+
+    object-fit: contain;
+
+    z-index: 5;
+
+    filter:
+        drop-shadow(0 0 15px rgba(0,255,255,0.5));
+
+    transition:
+        opacity 0.25s,
+        transform 0.3s;
+}
+
+
+/* =========================
+   CYBER RINGS
+========================= */
+
+.ring {
+
+    position: absolute;
+
+    border: 1px solid rgba(0,255,255,0.35);
+
+    border-radius: 50%;
+}
+
+.ring1 {
+
+    width: 360px;
+    height: 360px;
+
+    animation: rotate 15s linear infinite;
+}
+
+.ring2 {
+
+    width: 410px;
+    height: 410px;
+
+    border-style: dashed;
+
+    animation: rotateReverse 20s linear infinite;
+}
+
+.ring3 {
+
+    width: 300px;
+    height: 300px;
+
+    opacity: 0.5;
+
+    animation: pulse 3s ease-in-out infinite;
+}
+
+
+@keyframes rotate {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+@keyframes rotateReverse {
+
+    from {
+        transform: rotate(360deg);
+    }
+
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+
+@keyframes pulse {
+
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.3;
+    }
+
+    50% {
+        transform: scale(1.1);
+        opacity: 0.7;
+    }
+}
+
+
+/* =========================
+   WAVES
+========================= */
+
+.waves {
+
+    height: 50px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 5px;
+
+    margin-top: -20px;
+
+    opacity: 0.25;
+}
+
+
+.waves span {
+
+    width: 4px;
+
+    height: 15px;
+
+    border-radius: 10px;
+
+    background: #00ffff;
+
+    box-shadow:
+        0 0 8px #00ffff;
+}
+
+
+/* ACTIVE WAVES */
+
+.waves.active {
+
+    opacity: 1;
+}
+
+
+.waves.active span {
+
+    animation: wave 0.8s ease-in-out infinite alternate;
+}
+
+
+.waves.active span:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.waves.active span:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.waves.active span:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+.waves.active span:nth-child(5) {
+    animation-delay: 0.4s;
+}
+
+.waves.active span:nth-child(6) {
+    animation-delay: 0.3s;
+}
+
+.waves.active span:nth-child(7) {
+    animation-delay: 0.2s;
+}
+
+.waves.active span:nth-child(8) {
+    animation-delay: 0.1s;
+}
+
+
+@keyframes wave {
+
+    from {
+        height: 10px;
+    }
+
+    to {
+        height: 45px;
+    }
+}
+
+
+/* =========================
+   RESPONSE BOX
+========================= */
+
+.response-box {
+
+    width: 550px;
+
+    max-width: 80%;
+
+    margin-top: 10px;
+
+    padding: 15px 25px;
+
+    text-align: center;
+
+    border: 1px solid rgba(0,255,255,0.25);
+
+    background: rgba(0,10,20,0.5);
+
+    backdrop-filter: blur(10px);
+
+    border-radius: 12px;
+}
+
+
+.response-label {
+
+    font-size: 10px;
+
+    letter-spacing: 4px;
+
+    color: #00ffff;
+
+    margin-bottom: 7px;
+}
+
+
+#response {
+
+    font-size: 16px;
+
+    color: #d7ffff;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    position: absolute;
+
+    bottom: 30px;
+
+    left: 0;
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+}
+
+
+button {
+
+    padding: 12px 20px;
+
+    border-radius: 8px;
+
+    border: 1px solid rgba(0,255,255,0.4);
+
+    background: rgba(0,20,30,0.65);
+
+    color: #00ffff;
+
+    cursor: pointer;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    transition: 0.2s;
+}
+
+
+button:hover {
+
+    background: rgba(0,255,255,0.12);
+
+    box-shadow:
+        0 0 15px rgba(0,255,255,0.35);
+}
+
+
+/* MIC ON */
+
+.mic-button.active {
+
+    border-color: #00ff88;
+
+    color: #00ff88;
+
+    box-shadow:
+        0 0 20px rgba(0,255,136,0.3);
+}
